@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import LoginPage from "./components/LoginPage";
 import PinkyPromise from "./components/PinkyPromise";
 

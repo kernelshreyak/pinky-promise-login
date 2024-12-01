@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import interact from "interactjs";
+import { useState } from "react";
 import Draggable from "react-draggable";
 
 interface PinkyPromiseProps {
@@ -15,7 +14,7 @@ const PinkyPromise: React.FC<PinkyPromiseProps> = ({
 }) => {
   const [completed, setCompleted] = useState(false);
 
-  const handleDragStop = (event: any) => {
+  const handleDragStop = () => {
     const dropZone = document.getElementById("drop-zone");
     const draggable = document.getElementById("draggable-hand");
 
@@ -55,11 +54,6 @@ const PinkyPromise: React.FC<PinkyPromiseProps> = ({
       setCompleted(true);
       onPinkyPromiseComplete();
     }
-  };
-
-  const handleDrop = () => {
-    setCompleted(true);
-    onPinkyPromiseComplete();
   };
 
   return (
